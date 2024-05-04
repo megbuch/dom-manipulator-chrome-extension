@@ -1,20 +1,21 @@
 // Handles interaction with the web page
 
 let selectedElement
-let editMode = false
+let editMode = true
 
 const selectElement = event => {
   event.preventDefault()
   if (!editMode) return
   
   selectedElement = event.target
-  console.log(selectedElement)
+  selectedElement.style.background = 'yellow'
 }
 
 const toggleEditMode = request => {
   if (request.toggle === "editMode") editMode = !editMode
-  console.log('edit mode toggled')
+  console.log('edit mode: ' + editMode)
 }
 
-document.addEventListener('click', selectElement)
+
+window.addEventListener('click', selectElement)
 chrome.runtime.onMessage.addListener(toggleEditMode)
