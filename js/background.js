@@ -1,0 +1,1 @@
+// Would sync data between dashboard and popup (if we use a dashboard)

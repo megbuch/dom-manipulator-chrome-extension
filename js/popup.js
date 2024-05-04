@@ -1,0 +1,1 @@
+// Handles interaction in extension window
