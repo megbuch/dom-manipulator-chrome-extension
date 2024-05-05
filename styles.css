@@ -49,7 +49,6 @@ body .content-container button:hover {
   cursor: pointer;
 }
 body .content-container h1 {
-  text-wrap: nowrap;
   font-size: var(--font-size-lg);
 }
 

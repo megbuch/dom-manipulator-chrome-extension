@@ -38,7 +38,7 @@ modalContainer.innerHTML = modalHTML
 document.body.appendChild(modalContainer)
 
 let selectedElement
-let editMode = false
+let editMode = true
 
 const selectElement = event => {
   event.preventDefault()
@@ -107,5 +107,5 @@ function dragElement(element) {
   }
 }
 
-document.addEventListener('click', selectElement)
+window.addEventListener('click', selectElement)
 chrome.runtime.onMessage.addListener(toggleEditMode)
